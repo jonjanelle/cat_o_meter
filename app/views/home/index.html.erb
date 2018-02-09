@@ -1,0 +1,118 @@
+
+<div class="hero-image">
+  <div class="hero-content">
+    <div class="hero-title">
+      <h1 class="text-shadow-light">Cat-o-Meter</h1>
+      <p class="text-shadow-light">Rate the cutest cats on the internet.</p>
+    </div>
+    <div class="hero-cta">
+      <button class="btn btn-primary medium-hover-shadow">Rate Cats Now!</button>
+    </div>
+  </div>
+</div>
+<div class="divider-bar text-xl">
+  Think your cat is cute? <%= link_to "Sign up now", "#" %> to upload a picture!
+</div>
+<div class="container">
+<div class="row margin-bottom-4rem margin-top-2rem">
+  <h1 class="col-sm-12 text-center text-shadow-light text-huge color-orange">Rate Cats</h1>
+  <div class="col-sm-8 vote-img-wrapper">
+    <%= image_tag 'cat1.jpeg', class: "img img-fluid img-thumbnail" %>
+  </div>
+  <div class="col-sm-4 text-center">
+    <div class="mr-2 ml-2 selection-box">
+    <h3 class="text-center text-xl text-shadow-light color-purple">ABOUT</h3>
+    <hr>
+    <div class="bio-wrapper text-left">
+      <p class="text-medium"><strong>Name:</strong> Fluffy</p>
+      <p class="text-medium"><strong>Age:</strong> 3</p>
+      <p class="text-medium"><strong>Breed:</strong> Kitty cat</p>
+      <p class="text-medium"><strong>Bio:</strong> This cat is a real piece of shit.</p>
+    </div>
+    <!-- Rating Stars Box -->
+
+  </div>
+  <div class="rating-box selection-box mt-2">
+    <h3 class="text-center text-xl text-shadow-light color-purple">RATING</h3>
+    <hr>
+    <div class='rating-stars text-center'>
+      <ul id='stars'>
+        <li class='star' title='Eww.' data-value='1'>
+          <i class='fa fa-star fa-fw'></i>
+        </li>
+        <li class='star' title='Meh.' data-value='2'>
+          <i class='fa fa-star fa-fw'></i>
+        </li>
+        <li class='star' title='Just OK' data-value='3'>
+          <i class='fa fa-star fa-fw'></i>
+        </li>
+        <li class='star' title='Excellent' data-value='4'>
+          <i class='fa fa-star fa-fw'></i>
+        </li>
+        <li class='star' title='WOW!!!' data-value='5'>
+          <i class='fa fa-star fa-fw'></i>
+        </li>
+      </ul>
+      <button class="btn btn-primary">Submit Rating</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<% content_for :javascript  do %>
+<script>
+$(document).ready(function(){
+
+  /* 1. Visualizing things on Hover - See next part for action on click */
+  $('#stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+
+
+  /* 2. Action to perform on click */
+  $('#stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+
+    // JUST RESPONSE (Not needed)
+    var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+    var msg = "";
+    if (ratingValue > 1) {
+        msg = "Thanks! You rated this " + ratingValue + " stars.";
+    }
+    else {
+        msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
+    }
+    responseMessage(msg);
+
+  });
+
+
+});
+
+</script>
+<% end %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cat-O-Meter</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: 'shared/navbar' %>
+    <div class="container-fluid" style="margin-top: 48px;">
+      <% if notice %>
+        <div class="container alert alert-success alert-dismissible fade-in header-margin-top flash-box" role=alert>
+          <button type=button class=close data-dismiss=alert aria-label=Close>
+            <span aria-hidden=true class="font-lg">&times;</span>
+          </button>
+          <div class="font-lg">
+            <%= notice %>
+          </div>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="container alert alert-danger alert-dismissible fade-in header-margin-top flash-box" role=alert>
+          <button type=button class=close data-dismiss=alert aria-label=Close>
+            <span aria-hidden=true class="font-lg">&times;</span>
+          </button>
+          <div class="font-lg">
+            <%= notice %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+    <%= yield :javascript %>
+  </body>
+</html>

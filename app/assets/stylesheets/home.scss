@@ -1,0 +1,193 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body, html {
+    height: 100%;
+
+    background-color: #f5f5f5;
+}
+.color-orange {color: #F05F40;}
+.color-purple {color: #851be8;}
+.text-small   { font-size: 0.667rem  !important; }
+.text-base    { font-size: 1rem      !important; }
+.text-medium  { font-size: 1.25rem   !important; }
+.text-large   { font-size: 1.5rem    !important; }
+.text-xl      { font-size: 2.25rem   !important; }
+.text-xxl     { font-size: 3.375rem  !important; }
+.text-huge    { font-size: 5.063rem  !important; }
+
+.text-heavy { font-weight: 400 !important;}
+.text-heavier { font-weight: 600 !important;}
+
+.hero-image {
+    background: image-url("catometerhome3.png");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.hero-content {
+  text-align: center;
+  .hero-title {
+    width: 100%;
+    padding: 1em;
+    background: rgba(50,50,50, .6);
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    h1 {
+      font-size: 6em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #F05F40;
+    }
+    p {
+      color: white;
+      font-size: 2em;
+    }
+  }
+  .hero-cta {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    button {
+      font-size: 2.5em;
+      border: 1px solid gray;
+    }
+  }
+}
+
+.divider-bar {
+  text-align: center;
+  width: 100%;
+  padding: 1.5em 1em;
+  border-top: 2px solid #cfac42;
+  border-bottom: 2px solid #cfac42;
+  background-color: #851be8;
+  color: white;
+  a {
+    color: #cfac42;
+  }
+}
+
+.medium-hover-shadow {
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(150,150,150,.6);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(150,150,150,.6);
+  box-shadow: 0px 2px 3px 0px rgba(150,150,150,.6);
+  transition: .3s ease-in-out;
+  &:hover {
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(75,75,75,1);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(75,75,75,1);
+    box-shadow: 0px 2px 10px 0px rgba(75,75,75,1);
+  }
+}
+
+.light-hover-shadow {
+  border: 1px solid rgba(205,205,205,.85);
+  -webkit-box-shadow: 1px solid rgba(175,175,175,.3);
+  -moz-box-shadow: 1px solid rgba(175,175,175,.3);
+  box-shadow: 1px 0px 10px 1px rgba(175,175,175,.3);
+  transition: .3s ease-in-out;
+  &:hover {
+    border: 1px solid rgba(150,150,205,.6);
+    -webkit-box-shadow: 1px 0px 10px 1px rgba(100,100,100,.5);
+    -moz-box-shadow: 1px 0px 10px 1px rgba(100,100,100,.5);
+    box-shadow: 1px 0px 10px 1px rgba(100,100,100,.5);
+  }
+}
+
+.text-shadow-light {
+  text-shadow: 1px 1px 5px rgba(38, 38, 38, 1);
+}
+
+.selection-box {
+  margin: 0 auto;
+  max-width: 95%;
+//  min-width: 35%;
+  padding: 1rem;
+  background-color: #FFF;
+  border: 1px solid rgba(150,150,250,.7);
+  border-radius: 5px;
+  text-align: center;
+  transition: .1s ease-in-out;
+}
+
+@for $i from 1 through 8 {
+  .margin-bottom-#{$i}rem { margin-bottom: #{$i}rem !important; }
+  .margin-top-#{$i}rem { margin-top: #{$i}rem !important; }
+  .margin-left-#{$i}rem { margin-left: #{$i}rem !important; }
+  .margin-right-#{$i}rem { margin-right: #{$i}rem !important; }
+  .margin-#{$i}rem { margin: #{$i}rem !important; }
+
+  .padding-bottom-#{$i}rem { padding-bottom: #{$i}rem !important; }
+  .padding-top-#{$i}rem { padding-top: #{$i}rem !important; }
+  .padding-left-#{$i}rem { padding-left: #{$i}rem !important; }
+  .padding-right-#{$i}rem { padding-right: #{$i}rem !important; }
+  .padding-#{$i}rem { padding-right: #{$i}rem !important; }
+}
+
+.absolute-centered {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+}
+.btn-50 {
+  min-width: 50%;
+}
+
+.vote-img-wrapper {
+  img {
+    max-height: 95%;
+  }
+}
+@media(max-width: 1200px){
+  //.hero-image {background: image-url("catometerhome2.png");}
+}
+
+@media(max-width: 768px){
+  .vote-img-wrapper {
+    img {
+      max-height: 90%;
+    }
+  }
+//  .hero-image {background: image-url("catometerhome3.png");}
+}
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:2.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
