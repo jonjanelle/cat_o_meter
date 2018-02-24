@@ -12,6 +12,36 @@
  *
  *= require vendor.includes.scss
  *= require jquery-ui
- *= require_tree .
- *= require_self
+ *= require com-shared
  */
+
+ body, html {
+  height: 100%;
+ }
+
+body {
+  background-color: #f5f5f5;
+}
+
+footer {
+  height: 50px;
+  margin-top: -50px;
+}
+
+.content-wrapper {
+  min-height: 100%;
+}
+
+.content-wrapper-inner {
+  padding-bottom: 50px;
+}
+
+.flash-box {
+  position: fixed;
+  top: 70px;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+

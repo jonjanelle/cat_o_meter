@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128194849) do
+ActiveRecord::Schema.define(version: 20180210203401) do
 
   create_table "cats", force: :cascade do |t|
     t.string "name", null: false
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20180128194849) do
     t.string "breed"
     t.string "bio"
     t.string "image", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_cats_on_user_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "cat_id", null: false
+    t.integer "rating", null: false
+    t.index ["cat_id"], name: "index_ratings_on_cat_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,14 +54,6 @@ ActiveRecord::Schema.define(version: 20180128194849) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
-  end
-
-  create_table "votes", force: :cascade do |t|
-    t.integer "cat_id", null: false
-    t.integer "user_id", null: false
-    t.integer "rating", null: false
-    t.index ["cat_id"], name: "index_votes_on_cat_id"
-    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
 end

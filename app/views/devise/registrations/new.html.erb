@@ -1,28 +1,23 @@
-<div class="container">
+<div class="container user-form">
   <div class="selection-box light-hover-shadow">
-    <h2>Sign up</h2>
-
+    <div class="user-form-header color-orange mb-2">Sign up</div>
+    <hr class="mt-0">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "margin-top-6rem") do |f| %>
       <%= devise_error_messages! %>
-
       <div class="field form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        <%= f.label :email, class: "text-heavier" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "you will receive an email asking you to confirm your account" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :password, class: "text-heavier" %>
+        <% placeholder = @minimum_password_length ? "#{@minimum_password_length} characters minimum" : "" %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: placeholder %>
       </div>
 
       <div class="field form-group">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-      </div>
-
-      <div class="field form-group">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation, class: "text-heavier" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
-
       <%= f.submit "Sign up", class: "btn btn-primary btn-50" %>
     <% end %>
     <div class="margin-top-2rem"><%= render "devise/shared/links" %></div>

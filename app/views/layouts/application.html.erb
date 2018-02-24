@@ -9,7 +9,7 @@
 
   <body>
     <%= render partial: 'shared/navbar' %>
-    <div class="container-fluid" style="margin-top: 48px;">
+    <div class="container-fluid" style="margin-top: 56px;">
       <% if notice %>
         <div class="container alert alert-success alert-dismissible fade-in header-margin-top flash-box" role=alert>
           <button type=button class=close data-dismiss=alert aria-label=Close>
@@ -26,12 +26,17 @@
             <span aria-hidden=true class="font-lg">&times;</span>
           </button>
           <div class="font-lg">
-            <%= notice %>
+            <%= alert %>
           </div>
         </div>
       <% end %>
     </div>
-    <%= yield %>
+    <div class="content-wrapper">
+      <div class="content-wrapper-inner">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render partial: 'shared/footer' %>
     <%= yield :javascript %>
   </body>
 </html>
