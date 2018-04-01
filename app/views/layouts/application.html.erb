@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <%= render partial: 'shared/navbar' %>
+    <%= render partial: 'shared/navbar', locals: {user: current_user} %>
     <div class="container-fluid" style="margin-top: 56px;">
       <% if notice %>
         <div class="container alert alert-success alert-dismissible fade-in header-margin-top flash-box" role=alert>

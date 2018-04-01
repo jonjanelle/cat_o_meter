@@ -7,7 +7,7 @@
       <p class="text-shadow-light">Rate the cutest cats on the internet.</p>
     </div>
     <div class="hero-cta">
-      <button class="btn btn-primary medium-hover-shadow" id="main-cta">Rate Cats Now!</button>
+      <button class="btn btn-primary medium-hover-shadow ucase" id="main-cta">Rate Cats Now!</button>
     </div>
   </div>
 </div>
@@ -18,28 +18,32 @@
 </div>
 <div class="container-fluid" id="rating-area">
   <div class="row margin-bottom-4rem margin-top-2rem" >
-    <div class="col-sm-12 text-center text-shadow-light text-xxl color-orange margin-bottom-1rem ucase">Rate Cats</div>
+    <div class="col-sm-12 text-center text-shadow-light text-xxl color-orange margin-bottom-1rem ucase text-weight-heavy">Rate Cats</div>
     <div class="col-sm-7 vote-img-wrapper text-center">
-      <%= image_tag 'cat1.jpeg', class: "img img-fluid img-thumbnail", alt: "cat picture" %>
+      <%= image_tag @cat.image_url, class: "img img-fluid img-thumbnail", alt: "cat picture" %>
     </div>
     <div class="col-sm-5 text-center">
-      <%= render partial: 'rating_widget' %>
+      <%= render partial: 'rating_widget', locals: {cat: @cat}%>
       <div class=" selection-box margin-top-2rem">
         <h3 class="text-center text-xl text-shadow-light color-purple">ABOUT</h3>
         <hr>
         <div class="bio-wrapper text-left">
           <p class="text-medium">
             <strong>Name:</strong>
-            Fluffy</p>
+            <%= @cat.name %>
+          </p>
           <p class="text-medium">
             <strong>Age:</strong>
-            3</p>
+            <%= @cat.age %>
+          </p>
           <p class="text-medium">
             <strong>Breed:</strong>
-            Kitty cat</p>
+            <%= @cat.breed || "unknown" %>
+          </p>
           <p class="text-medium">
             <strong>Bio:</strong>
-            This cat is a real piece of shit.</p>
+            <%= @cat.bio %>
+          </p>
         </div>
       </div>
     </div>

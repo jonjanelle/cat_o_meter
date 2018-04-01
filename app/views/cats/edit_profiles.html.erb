@@ -1,56 +1,21 @@
 <%= stylesheet_link_tag 'cat' %>
 <div class="container-fluid">
   <div class="text-center">
-    <div class="mb-2 color-orange text-xl">Edit Cat Profiles</div>
+    <div class="mb-2 color-orange text-xl">Edit Cat Profile</div>
     <% if @cats.count == 0 %>
       <div class="reqd">
-        You haven't added any cats yet!
+        You haven't added a cat yet!
       </div>
-    <% else %>
-      You can add
     <% end %>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      <div id="cat-form-wrapper" class="flex-container cat-info"></div>
+      <div id="cat-form-wrapper" class="flex-container cat-info">
+        <%= render partial: 'cat_form' %>
+      </div>
     </div>
   </div>
   <div class="text-center mb-3">
-    <button id="add-cat-btn" class="btn btn-success btn-50 mt-3"><i class="fa fa-plus-circle"></i> Add Cat</button>
+    <!-- <button id="add-cat-btn" class="btn btn-success btn-50 mt-3"><i class="fa fa-plus-circle"></i> Add Cat</button> -->
   </div>
 </div>
-
-  <script id="cat-form-template" type="text/x-handlebars-template">
-    <%= render partial: 'cat_profile_form' %>
-  </script>
-</div>
-
-
-<% content_for :javascript do %>
-  <script>
-    $(function(){
-      const formTemplateScript = $("#cat-form-template").html();
-      const formTemplate = Handlebars.compile (formTemplateScript);
-      var formCount = 1;
-      
-      function readURL(inputID) {
-        console.log(inputID);
-          var input = $("."+inputID)[0];
-          if (input.files && input.files[0]) {
-            var reader = new FileReader();
-              reader.onload = function (e) {
-                 $('#' + inputID + '_pic').attr('src', e.target.result);
-              };
-              reader.readAsDataURL(input.files[0]);
-          }
-      }
-
-      $("#add-cat-btn").on("click", function(evt) {
-        evt.preventDefault();
-        $("#cat-form-wrapper").append(formTemplate({id: formCount}));
-        $(".cat_img_"+formCount).on("change", function() {readURL("cat_img_"+(formCount-1))});
-        formCount += 1;
-      });
-    });
-  </script>
-<% end %>
