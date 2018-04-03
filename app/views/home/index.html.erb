@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag 'home' %>
-
+<%= javascript_include_tag 'rating' %>
 <div class="hero-image">
   <div class="hero-content">
     <div class="hero-title">
@@ -12,43 +12,61 @@
   </div>
 </div>
 <div class="divider-bar text-xl">
-  Think your cat is cute?
-  <%= link_to "Sign up now", new_user_registration_path %>
-  to upload a picture!
+  <span id="banner-msg">
+    <% if @user.blank? %>
+      Think your cat is cute?
+      <%= link_to "Sign up now", new_user_registration_path %>
+      to upload a picture!
+    <% else %>
+      You've rated <%= pluralize(@user.cats_rated.count, "cat") %>! You can <%= link_to "view your past ratings here" %>
+    <% end %>
+  </span>
 </div>
+<% if @cat.present? %>
 <div class="container-fluid" id="rating-area">
   <div class="row margin-bottom-4rem margin-top-2rem" >
-    <div class="col-sm-12 text-center text-shadow-light text-xxl color-orange margin-bottom-1rem ucase text-weight-heavy">Rate Cats</div>
-    <div class="col-sm-7 vote-img-wrapper text-center">
-      <%= image_tag @cat.image_url, class: "img img-fluid img-thumbnail", alt: "cat picture" %>
+    <div class="col-sm-12 text-center text-shadow-light text-xxl color-orange margin-bottom-1rem ucase text-weight-heavy">
+      <span id="rating-header">Rate <%= @cat.name || "Cats" %></span>
     </div>
-    <div class="col-sm-5 text-center">
-      <%= render partial: 'rating_widget', locals: {cat: @cat}%>
-      <div class=" selection-box margin-top-2rem">
-        <h3 class="text-center text-xl text-shadow-light color-purple">ABOUT</h3>
-        <hr>
-        <div class="bio-wrapper text-left">
-          <p class="text-medium">
-            <strong>Name:</strong>
-            <%= @cat.name %>
-          </p>
-          <p class="text-medium">
-            <strong>Age:</strong>
-            <%= @cat.age %>
-          </p>
-          <p class="text-medium">
-            <strong>Breed:</strong>
-            <%= @cat.breed || "unknown" %>
-          </p>
-          <p class="text-medium">
-            <strong>Bio:</strong>
-            <%= @cat.bio %>
-          </p>
+    <div class="col-md-7 col-sm-12 vote-img-wrapper text-center mb-2">
+      <%= image_tag @cat.image_url, class: "img img-fluid img-thumbnail", id: "cat-img", alt: "cat picture" %>
+    </div>
+    <div class="col-md-5 col-sm-12 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12 mb-2">
+          <span id="rating-widget">
+            <%= render partial: 'rating_widget', locals: {cat: @cat, user: @user} %>
+          </span>
+        </div>
+        <div class="col-md-12 col-sm-6 col-xs-12">
+          <div class=" selection-box">
+            <h3 class="text-center text-xl text-shadow-light color-purple">ABOUT</h3>
+            <hr>
+            <div class="bio-wrapper text-left">
+              <div class="text-medium">
+                <strong>Name:</strong>
+                <span id="cat-name"><%= @cat.name %></span>
+              </div>
+              <div class="text-medium">
+                <strong>Age:</strong>
+                <span id="cat-age"><%= @cat.age %></span>
+              </div>
+              <div class="text-medium">
+                <strong>Breed:</strong>
+                <span id="cat-breed"><%= @cat.breed || "unknown" %></span>
+              </div>
+              <div class="text-medium">
+                <strong>Bio:</strong>
+                <span id="cat-bio"><%= @cat.bio %></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<% end %>
 
 <% content_for :javascript  do %>
   <script>

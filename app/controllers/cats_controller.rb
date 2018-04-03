@@ -55,6 +55,31 @@ class CatsController < ApplicationController
   end
 
   def create_rating
+    rating = params[:rating].to_i
+    error = nil
+    @user = current_user
+    if rating > 0
+      if !@user.cats_rated.include?(params[:cat_id].to_i)
+        rating = Rating.new(user_id: params[:user_id], cat_id: params[:cat_id], rating: params[:rating])
+        @user.cats_rated << params[:cat_id]
+        @user.save
+      else
+        error = "You've rated all available cats!"
+      end
+    else
+      error = "Please select a rating"
+    end
+    cat_ids = Cat.all.pluck(:id) - @user.cats_rated
+    @cat = Cat.where(id: cat_ids[rand(cat_ids.length)]).first
+    respond_to do |format|
+      if error
+         format.js { render :js => "$('#rating_error').text('#{error}')" and return}
+      elsif rating.save
+        format.js
+      else
+        format.js { render :js => "alert('Error rating cat!')" and return}
+      end
+    end
   end
 
   private

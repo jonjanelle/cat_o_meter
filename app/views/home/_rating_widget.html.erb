@@ -1,6 +1,8 @@
 <div class="rating-box selection-box">
   <h3 class="text-center text-xl text-shadow-light color-purple">RATING</h3>
-  <hr>
+  <div class="reqd" id="rating_error"></div>
+  <div><span class="text-weight-heavy">Average:</span> <%= @cat.average_rating.round(2) %></div>
+  <hr class="mt-0">
   <div class='rating-stars text-center'>
     <ul id='stars'>
       <li class='star' title='1/10' data-value='1'>
@@ -34,13 +36,17 @@
         <i class='fa fa-star fa-fw'></i>
       </li>
     </ul>
-    <% if @user.present? %>
-      <button class="btn btn-primary">Submit Rating</button>
+
+    <% if user.present? %>
+      <%= form_tag create_rating_cats_path, method: :post, remote: true do %>
+        <%= hidden_field_tag :user_id, user.id %>
+        <%= hidden_field_tag :cat_id, cat.id %>
+        <%= hidden_field_tag :rating, value: nil %>
+        <%= submit_tag "Submit Rating", class: "btn btn-primary" %>
+      <% end %>
     <% else %>
-      <%= form_tag "" do %>
-        <%= link_to new_user_session_path, class: "btn btn-primary" do %>
-          <i class="fa fa-lock"></i>  Sign-in to vote!
-        <% end %>
+      <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+        <i class="fa fa-lock"></i>  Sign-in to vote!
       <% end %>
     <% end %>
   </div>
@@ -49,47 +55,7 @@
 <% content_for :javascript  do %>
   <script>
     $(document).ready(function () {
-      $(".star").tooltip();
-      $('#stars li').on('mouseover', function () {
-        var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
-
-        // Now highlight all the stars that's not after the current hovered star
-        $(this).parent().children('li.star').each(function (e) {
-          if (e < onStar) {
-            $(this).addClass('hover');
-          } else {
-            $(this).removeClass('hover');
-          }
-        });
-
-      }).on('mouseout', function () {
-        $(this).parent().children('li.star').each(function (e) {
-          $(this).removeClass('hover');
-        });
-      });
-
-      $('#stars li').on('click', function () {
-        var onStar = parseInt($(this).data('value'), 10); // The star currently selected
-        var stars = $(this).parent().children('li.star');
-
-        for (i = 0; i < stars.length; i++) {
-          $(stars[i]).removeClass('selected');
-        }
-
-        for (i = 0; i < onStar; i++) {
-          $(stars[i]).addClass('selected');
-        }
-
-        var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
-        var msg = "";
-        console.log(ratingValue);
-        if (ratingValue > 0) {
-          msg = "Thanks! You rated this cat " + ratingValue + " stars.";
-        }
-        responseMessage(msg);
-
-      });
-
+      Rating.init();
     });
   </script>
 <% end %>

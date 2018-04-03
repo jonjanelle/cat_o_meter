@@ -60,6 +60,7 @@
 .vote-img-wrapper {
   img {
     max-height: 75vh !important;
+    min-width: 60%;
   }
 }
 
@@ -80,7 +81,7 @@
 
 /* Idle State of the stars */
 .rating-stars ul > li.star > i.fa {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #ccc; /* Color on idle state */
 }
 
@@ -96,7 +97,7 @@
 
 @media(max-width: 1200px){
   .rating-stars ul > li.star > i.fa {
-    font-size: 1.2em !important;
+    font-size: 1.0em !important;
     margin: 0;
   }
 }
