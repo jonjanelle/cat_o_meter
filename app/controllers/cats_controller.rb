@@ -64,7 +64,7 @@ class CatsController < ApplicationController
         @user.cats_rated << params[:cat_id]
         @user.save
       else
-        error = "You've rated all available cats!"
+        error = "You\\'ve rated all available cats!"
       end
     else
       error = "Please select a rating"
@@ -73,7 +73,7 @@ class CatsController < ApplicationController
     @cat = Cat.where(id: cat_ids[rand(cat_ids.length)]).first
     respond_to do |format|
       if error
-         format.js { render :js => "$('#rating_error').text('#{error}')" and return}
+         format.js { render :js => "$('#rating_error').text('#{error}');" and return }
       elsif rating.save
         format.js
       else

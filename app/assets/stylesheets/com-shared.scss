@@ -2,7 +2,8 @@
 .color-purple { color: #851be8; }
 .color-white  { color: #FFF; }
 .color-yellow { color: #dddd33; }
-.reqd { color: #993333; }
+
+.reqd { color: #BB3333; }
 .text-small   { font-size: 0.667rem  !important; }
 .text-base    { font-size: 1rem      !important; }
 .text-medium  { font-size: 1.25rem   !important; }
@@ -103,6 +104,16 @@
     font-weight: 500;
 }
 
-.reqd {
-  color: #DD3333;
+#error_explanation {
+  h2 {
+    font-size: 1.2em;
+  }
+  li {
+    color: #BB3333;
+  }
+}
+.field_with_errors {
+  input {
+    border: 1px solid #BB3333;
+  }
 }

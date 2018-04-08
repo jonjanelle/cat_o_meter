@@ -1,4 +1,4 @@
-<div class="container user-form">
+<div class="container user-form mt-2">
   <div class="selection-box light-hover-shadow">
     <div class="user-form-header color-orange mb-2">Sign up</div>
     <hr class="mt-0">
@@ -6,17 +6,16 @@
       <%= devise_error_messages! %>
       <div class="field form-group">
         <%= f.label :email, class: "text-heavier" %>
-        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "you will receive an email asking you to confirm your account" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "you will receive an email asking you to confirm your account", required: true %>
       </div>
       <div class="field form-group">
         <%= f.label :password, class: "text-heavier" %>
         <% placeholder = @minimum_password_length ? "#{@minimum_password_length} characters minimum" : "" %>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: placeholder %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: placeholder, required: true %>
       </div>
-
       <div class="field form-group">
-        <%= f.label :password_confirmation, class: "text-heavier" %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        <%= f.label :password_confirmation, class: "text-heavier" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
       </div>
       <%= f.submit "Sign up", class: "btn btn-primary btn-50" %>
     <% end %>

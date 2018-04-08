@@ -8,4 +8,8 @@ class Cat < ApplicationRecord
     ratings.present? ? ratings.sum.to_f/ratings.count : 0
   end
 
+  def num_ratings
+    self.ratings.count
+  end
+
 end
