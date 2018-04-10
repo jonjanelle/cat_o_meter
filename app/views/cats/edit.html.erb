@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag 'cat' %>
+<div class="container-fluid">
+  <div class="text-center">
+    <div class="mb-2 color-orange text-xl">Edit Cat Profile</div>
+  </div>
+  <%= render partial: 'cat_form', locals: {cat: @cat, user: @user, submit_method: :patch} %>
+</div>

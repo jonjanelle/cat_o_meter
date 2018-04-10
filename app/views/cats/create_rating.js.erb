@@ -1,0 +1,10 @@
+
+$("#rating-widget").html("<%= escape_javascript(render partial: 'home/rating_widget', locals: {cat: @cat, user: @user}) %>");
+$("#rating-header").text("Rate "+"<%= @cat.name || 'Cats' %>");
+$("#cat-img").attr('src', "<%= @cat.image_url %>");
+$("#cat-name").text("<%= @cat.name %>");
+$("#cat-age").text("<%= @cat.age %>");
+$("#cat-breed").text("<%= @cat.breed || 'unknown' %>");
+$("#cat-bio").text("<%= @cat.bio %>");
+
+Rating.init();
