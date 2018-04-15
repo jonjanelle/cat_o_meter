@@ -5,9 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2'
 # Use postgres as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -56,6 +55,13 @@ gem "rolify"
 #file updloads
 gem 'carrierwave'
 
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
+gem 'capistrano-rvm'
+gem "capistrano-sidekiq"
+gem 'capistrano-npm'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -70,10 +76,6 @@ group :development do
   gem "better_errors"
 end
 
-group :production do
-  gem 'pg'
-  #gem 'unicorn'
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
