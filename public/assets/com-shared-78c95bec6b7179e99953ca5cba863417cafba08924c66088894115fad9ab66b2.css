@@ -1,0 +1,567 @@
+/* line 1, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.color-orange {
+  color: #F05F40;
+}
+
+/* line 2, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.color-purple {
+  color: #851be8;
+}
+
+/* line 3, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.color-white {
+  color: #FFF;
+}
+
+/* line 4, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.color-yellow {
+  color: #dddd33;
+}
+
+/* line 6, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.reqd {
+  color: #BB3333;
+}
+
+/* line 7, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-small {
+  font-size: 0.667rem  !important;
+}
+
+/* line 8, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-base {
+  font-size: 1rem      !important;
+}
+
+/* line 9, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-medium {
+  font-size: 1.25rem   !important;
+}
+
+/* line 10, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-large {
+  font-size: 1.5rem    !important;
+}
+
+/* line 11, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-xl {
+  font-size: 2.25rem   !important;
+}
+
+/* line 12, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-xxl {
+  font-size: 3.375rem  !important;
+}
+
+/* line 13, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-huge {
+  font-size: 5.063rem  !important;
+}
+
+/* line 14, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-heavy {
+  font-weight: 400 !important;
+}
+
+/* line 15, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-heavier {
+  font-weight: 600 !important;
+}
+
+/* line 17, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.ucase {
+  text-transform: uppercase;
+}
+
+/* line 19, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.absolute-centered {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 29, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.medium-hover-shadow {
+  box-shadow: 0px 2px 3px 0px rgba(150, 150, 150, 0.6);
+  transition: .3s ease-in-out;
+}
+/* line 34, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.medium-hover-shadow:hover {
+  box-shadow: 0px 2px 10px 0px #4b4b4b;
+}
+
+/* line 41, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.light-hover-shadow {
+  border: 1px solid rgba(205, 205, 205, 0.85);
+  box-shadow: 1px 0px 10px 1px rgba(175, 175, 175, 0.3);
+  transition: .3s ease-in-out;
+}
+/* line 47, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.light-hover-shadow:hover {
+  border: 1px solid rgba(150, 150, 205, 0.6);
+  box-shadow: 1px 0px 10px 1px rgba(100, 100, 100, 0.5);
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-1rem {
+  margin-bottom: 1rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-1rem {
+  margin-top: 1rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-1rem {
+  margin-left: 1rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-1rem {
+  margin-right: 1rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-1rem {
+  margin: 1rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-1rem {
+  padding-bottom: 1rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-1rem {
+  padding-top: 1rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-1rem {
+  padding-left: 1rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-1rem {
+  padding-right: 1rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-1rem {
+  padding-right: 1rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-2rem {
+  margin-bottom: 2rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-2rem {
+  margin-top: 2rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-2rem {
+  margin-left: 2rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-2rem {
+  margin-right: 2rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-2rem {
+  margin: 2rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-2rem {
+  padding-bottom: 2rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-2rem {
+  padding-top: 2rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-2rem {
+  padding-left: 2rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-2rem {
+  padding-right: 2rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-2rem {
+  padding-right: 2rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-3rem {
+  margin-bottom: 3rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-3rem {
+  margin-top: 3rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-3rem {
+  margin-left: 3rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-3rem {
+  margin-right: 3rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-3rem {
+  margin: 3rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-3rem {
+  padding-bottom: 3rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-3rem {
+  padding-top: 3rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-3rem {
+  padding-left: 3rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-3rem {
+  padding-right: 3rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-3rem {
+  padding-right: 3rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-4rem {
+  margin-bottom: 4rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-4rem {
+  margin-top: 4rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-4rem {
+  margin-left: 4rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-4rem {
+  margin-right: 4rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-4rem {
+  margin: 4rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-4rem {
+  padding-bottom: 4rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-4rem {
+  padding-top: 4rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-4rem {
+  padding-left: 4rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-4rem {
+  padding-right: 4rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-4rem {
+  padding-right: 4rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-5rem {
+  margin-bottom: 5rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-5rem {
+  margin-top: 5rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-5rem {
+  margin-left: 5rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-5rem {
+  margin-right: 5rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-5rem {
+  margin: 5rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-5rem {
+  padding-bottom: 5rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-5rem {
+  padding-top: 5rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-5rem {
+  padding-left: 5rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-5rem {
+  padding-right: 5rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-5rem {
+  padding-right: 5rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-6rem {
+  margin-bottom: 6rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-6rem {
+  margin-top: 6rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-6rem {
+  margin-left: 6rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-6rem {
+  margin-right: 6rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-6rem {
+  margin: 6rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-6rem {
+  padding-bottom: 6rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-6rem {
+  padding-top: 6rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-6rem {
+  padding-left: 6rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-6rem {
+  padding-right: 6rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-6rem {
+  padding-right: 6rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-7rem {
+  margin-bottom: 7rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-7rem {
+  margin-top: 7rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-7rem {
+  margin-left: 7rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-7rem {
+  margin-right: 7rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-7rem {
+  margin: 7rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-7rem {
+  padding-bottom: 7rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-7rem {
+  padding-top: 7rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-7rem {
+  padding-left: 7rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-7rem {
+  padding-right: 7rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-7rem {
+  padding-right: 7rem !important;
+}
+
+/* line 56, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-bottom-8rem {
+  margin-bottom: 8rem !important;
+}
+
+/* line 57, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-top-8rem {
+  margin-top: 8rem !important;
+}
+
+/* line 58, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-left-8rem {
+  margin-left: 8rem !important;
+}
+
+/* line 59, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-right-8rem {
+  margin-right: 8rem !important;
+}
+
+/* line 60, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.margin-8rem {
+  margin: 8rem !important;
+}
+
+/* line 62, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-bottom-8rem {
+  padding-bottom: 8rem !important;
+}
+
+/* line 63, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-top-8rem {
+  padding-top: 8rem !important;
+}
+
+/* line 64, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-left-8rem {
+  padding-left: 8rem !important;
+}
+
+/* line 65, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-right-8rem {
+  padding-right: 8rem !important;
+}
+
+/* line 66, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.padding-8rem {
+  padding-right: 8rem !important;
+}
+
+/* line 69, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-shadow-light {
+  text-shadow: 1px 1px 5px #262626;
+}
+
+/* line 73, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.user-form {
+  margin-top: 5% !important;
+}
+/* line 75, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.user-form .form-control {
+  max-width: 80%;
+  margin: auto;
+}
+/* line 79, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.user-form .selection-box {
+  margin: auto !important;
+}
+
+/* line 83, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.user-form-header {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+/* line 88, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.selection-box {
+  margin: auto;
+  max-width: 95%;
+  padding: 1rem;
+  background-color: #FFF;
+  border: 1px solid rgba(150, 150, 250, 0.7);
+  border-radius: 5px;
+  text-align: center;
+  transition: .1s ease-in-out;
+}
+
+/* line 99, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.btn-50 {
+  min-width: 50%;
+}
+
+/* line 103, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.text-weight-heavy {
+  font-weight: 500;
+}
+
+/* line 108, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+#error_explanation h2 {
+  font-size: 1.2em;
+}
+/* line 111, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+#error_explanation li {
+  color: #BB3333;
+}
+
+/* line 116, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/com-shared.scss */
+.field_with_errors input {
+  border: 1px solid #BB3333;
+}

@@ -1,0 +1,128 @@
+/* line 1, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+#rating-area {
+  height: 100%;
+}
+
+/* line 5, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-image {
+  background: url(/assets/catometerhome3-9ac4307a8085adf8b6102a58f00fa8ffab1d33fb185b6a3b323f81906897371f.png);
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* line 14, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content {
+  text-align: center;
+}
+/* line 16, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content .hero-title {
+  width: 100%;
+  padding: 1em;
+  background: rgba(50, 50, 50, 0.6);
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+/* line 24, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content .hero-title h1 {
+  font-size: 6em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #F05F40;
+}
+/* line 30, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content .hero-title p {
+  color: white;
+  font-size: 2em;
+}
+/* line 35, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content .hero-cta {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+/* line 40, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.hero-content .hero-cta button {
+  font-size: 2.5em;
+  border: 1px solid gray;
+}
+
+/* line 47, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.divider-bar {
+  text-align: center;
+  width: 100%;
+  padding: 1.5em 1em;
+  border-top: 2px solid #cfac42;
+  border-bottom: 2px solid #cfac42;
+  background-color: #851be8;
+  color: white;
+}
+/* line 55, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.divider-bar a {
+  color: #cfac42;
+}
+
+/* line 61, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.vote-img-wrapper img {
+  max-height: 75vh !important;
+  min-width: 60%;
+}
+
+/* line 67, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-box {
+  width: 100%;
+}
+
+/* line 71, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-stars ul {
+  list-style-type: none;
+  padding: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 77, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-stars ul > li.star {
+  display: inline-block;
+}
+
+/* Idle State of the stars */
+/* line 83, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-stars ul > li.star > i.fa {
+  font-size: 1.2em;
+  color: #ccc;
+  /* Color on idle state */
+}
+
+/* Hover state of the stars */
+/* line 89, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-stars ul > li.star.hover > i.fa {
+  color: #FFCC36;
+}
+
+/* Selected state of the stars */
+/* line 94, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+.rating-stars ul > li.star.selected > i.fa {
+  color: #FF912C;
+}
+
+@media (max-width: 1200px) {
+  /* line 99, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+  .rating-stars ul > li.star > i.fa {
+    font-size: 1.0em !important;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* line 108, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/home.scss */
+  .hero-content .hero-title h1 {
+    font-size: 3em;
+  }
+}

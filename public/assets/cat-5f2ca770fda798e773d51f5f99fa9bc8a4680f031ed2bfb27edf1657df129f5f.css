@@ -1,0 +1,47 @@
+/* line 1, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+.flex-container {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* line 16, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+.flex-item {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+/* line 21, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+input[type="file"] {
+  display: none;
+}
+
+/* line 25, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+.file-upload-button {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #851be8;
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+/* line 33, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+.file-upload-button:hover {
+  background-color: #5e11a6;
+}
+
+/* line 38, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+.cat-img-preview {
+  max-width: 180px;
+}
+
+@media (min-width: 800px) {
+  /* line 44, C:/Users/jon/Google Drive/Programming Projects/Rails/cat_o_meter/app/assets/stylesheets/cat.scss */
+  .flex-container {
+    width: 80%;
+  }
+}
