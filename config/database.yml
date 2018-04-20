@@ -20,3 +20,12 @@ test:
   pool: 5
   username: catometer
   password: password
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: production
+  pool: 5
+  host: localhost
+  username: postgres
+  password: x1tqh385

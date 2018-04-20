@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby.exe
+#!/root/.rbenv/versions/2.5.1/bin/ruby
 VENDOR_PATH = File.expand_path('..', __dir__)
 Dir.chdir(VENDOR_PATH) do
   begin
