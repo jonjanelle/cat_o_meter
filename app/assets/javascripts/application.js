@@ -15,5 +15,4 @@
 //= require jquery3
 //= require popper
 //= require handlebars/handlebars-v4.0.11.js
-//= require bootstrap-sprockets
-//= require_tree .
+//= require bootstrap
