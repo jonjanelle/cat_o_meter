@@ -103,6 +103,10 @@
 }
 
 @media(max-width: 768px) {
+  .hero-image {
+      background: image-url("catometerhome4.png") !important;
+      height: 1200px !important;
+  }
   .hero-content {
     .hero-title {
       h1 {
